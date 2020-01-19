@@ -11,7 +11,7 @@ def iterate(initial_state: float, iterations: int, map_fn: Callable) -> List[flo
     current_state = initial_state
     states = list()
     for _ in range(iterations):
-        states.append(current_state)
         current_state = map_fn(current_state)
+        states.append(current_state)
     return states
 
